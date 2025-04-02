@@ -8,43 +8,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8fd9367667.js" crossorigin="anonymous"></script>
 
-    <link href="public/styles/main.css" rel="stylesheet">
-    <script src="public/scripts/script.js" defer></script>
+    <link href="public/styles/register.css" rel="stylesheet">
     
-
-    <title>Login</title>
+    <title>Register</title>
 </head>
 <body id="login-page" class="flex-row-center-center">
 
     <div class="welcome-logo-container">
         <img src="public/images/htrack_logo.png" alt="hTrack Logo" class="logo">
-        <h1 class="welcome">Welcome to hTrack!</h1>
     </div>
 
     <div class="flex-row-center-center">
-        <h1>Login to your account</h1>
+        <h1>Create an account</h1>
         <form class="login-form flex-column-center-center">
             <div class="email">
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="Enter your email">
             </div>
             
-            <div class="password_2">
+            <div class="password_header1">
                 <label for="password">Password</label>
-                <a href="forgot-password" class="forgot">Forgot?</a>
             </div>
             
             <div class="password">
                 <input type="password" id="password" placeholder="Enter your password">
                 <i class="fa-solid fa-eye flex-column-center-center" onclick="togglePassword()"></i>  
             </div>
-            
-            <button type="submit"><i class="fa-solid fa-right-to-bracket"></i> Login now</button>
 
-            <div class="Sign-up-container">
-                <h1 class="sign-up-text">Don't have an account yet? <a href="register" class="sing-up">Sign UP!</a></h1>
+            <div class="password_header2">
+                <label for="Confirm_password">Confirm Password</label>
+            </div>
+
+            <div class="password_confirm">
+                <input type="password" id="password" placeholder="Enter your password">
+                <i class="fa-solid fa-eye flex-column-center-center" onclick="togglePassword()"></i>  
+            </div>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="agree">
+                <h1 class="checkbox">I agree to all the <a href="terms-page.html" class="terms">Terms</a> and <a href="privacy-policies-page.html" class="terms">Privacy Policies</a></h1>
                 
             </div>
+
+            <button type="submit"><i class="fa-solid fa-right-to-bracket"></i> Create account</button>
+
+            <div class="Sign-in-container">
+                <h1 class="sign-in-text">Already have an account?? <a href="login" class="sing-in">Sign In!</a></h1>
+                
+            </div>
+
+            
         </form>
         
 

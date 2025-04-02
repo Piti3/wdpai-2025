@@ -8,10 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8fd9367667.js" crossorigin="anonymous"></script>
 
+
     <link href="public/styles/dashboard.css" rel="stylesheet">
+    <link href="public/styles/pomodoro.css" rel="stylesheet">
     <script src="public/scripts/menu.js" defer></script>
 
-    <title>DASHBOARD</title>
+    <title>POMODORO</title>
 </head>
 <body>
     <header>
@@ -50,40 +52,18 @@
         </nav>
     </header>
     <main>
-        <aside class="dashboard-container">
-            <section class="habits-score">
-                <h2>Your habits:</h2>
-                    <ul>
-                        <li>1 <strong>Czytanie</strong> <progress value="80" max="100"></progress></li>
-                        <li>2 <strong>Siłownia</strong> <progress value="80" max="100"></progress></li>
-                        <li>3 <strong>Bieganie</strong> <progress value="80" max="100"></progress></li>
-                        <li>4 <strong>Śpiew</strong> <progress value="80" max="100"></progress></li>
-                    </ul>
-            </section>
-        
-            <section class="todo">
-                <h2>To do list:</h2>
-                <div class="todo-input-container">
-                    <input type="text" id="todo-input" placeholder="Wpisz zadanie...">
-                    <button id="add-todo">Dodaj</button>
-                </div>
-                <ul id="todo-list"></ul>
-            </section>
-        </aside>
-        <section class="habit-tracking">
-            <div class="habit">
-                <h3>Czytanie <i class="fas fa-book"></i></h3>
-                <div class="calendar"></div>
+        <div class="pomodoro-container">
+            <div class="timer-circle">
+                <span id="timer">00:25:00</span>
             </div>
-            <div class="habit">
-                <h3>Siłownia</h3>
-                <div class="calendar"></div>
+            <div class="controls">
+                <button class="control-btn"><i class="fas fa-pause"></i></button>
+                <button class="control-btn"><i class="fas fa-forward"></i></button>
             </div>
-            <div class="habit">
-                <h3>Bieganie <i class="fas fa-running"></i></h3>
-                <div class="calendar"></div>
+            <div class="settings">
+                <i class="fa-solid fa-gear"></i> <span>Settings</span>
             </div>
-        </section>
+        </div>
     </main>
 </body>
 </html>

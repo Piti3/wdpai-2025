@@ -44,6 +44,7 @@ body {
 
 
 .flex-column-center-center {
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,6 +52,7 @@ body {
 }
 
 .flex-row-center-center { 
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,6 +63,7 @@ body {
     display: flex;
     text-align: left;
     width: 100%;
+    margin-top: 1em
 }
 
 /*ułozenie dwóch kontenerów*/
@@ -111,7 +114,7 @@ button {
     /*height: 40%;*/
 }
 
-.email, .password  {
+.email, .password, .password_confirm  {
     position: relative;
     display: flex;
     flex-direction: column; /* Ustawienie elementów w kolumnie */
@@ -119,7 +122,7 @@ button {
     width: 100%;
 }
 
-.email label, .password_2 label {
+.email label, .password_header1 label, .password_header2 label{
     font-size: 14px;
     margin-top: 15px;
     margin-bottom: 3px;
@@ -127,7 +130,7 @@ button {
 }
 
 /* Ikona oczka ustawiona do prawej strony */
-.password > i {
+.password > i, .password_confirm > i{
     position: absolute;
     padding-right: 10px;
     right: 20px;
@@ -138,26 +141,36 @@ button {
     color: #666;
 }
 
-/* Układ "Password" i "Forgot?" w jednej linii */
-.password_2 {
+/* Układ Password headerow */
+.password_header1, .password_header2 {
     display: flex;
     justify-content: space-between;
     width: 100%;
     align-items: center;
 }
 
-.forgot {
-    font-size: 0.9em;
-    color: #2A90F0;
-    text-decoration: none;
+.checkbox-container {
+    margin-top: 15px;
+    display:flex;
+    width: 100%;
+    align-items: center;
+    gap: 8px
+    
 }
 
-.Sign-up-container {
+.checkbox-container input[type="checkbox"] {
+    width: 16px; /* Możesz dostosować */
+    height: 16px;
+    cursor: pointer;
+}
+
+.checkbox-container > h1 {
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.Sign-in-container {
     padding-top: 2%;
-}
-
-a.sign-up {
-    color: orange;
 }
 
 .login-form > div > input {
@@ -200,7 +213,7 @@ input {
 
 
 button {
-    margin-top: 3em;
+    margin-top: 2em;
     background-color: var(--primary-color);
     color: white;
     width: 100%;
@@ -218,12 +231,12 @@ button {
 
 
 @media (max-width: 900px) {
-    body {
+     body {
         background: white;
         justify-content: flex-start;
         padding: 40px 20px;
         height: auto;
-        margin-top: 4em
+        margin-top: 4em;
     }
 
     html, body {
@@ -239,9 +252,9 @@ button {
     }
 
     #login-page > div {
-        width: 100%;
+        width: 100% !important;
         max-width: 95%;
-        margin: 10px 0;
+        margin: 0;
         padding: 2em;
         box-sizing: border-box;
         box-shadow: none;
@@ -260,37 +273,29 @@ button {
     .welcome-logo-container {
         flex-direction: column;
         text-align: center;
-        margin-bottom: 2rem;  
+        margin-bottom: 1rem;
     }
 
     .logo {
-        max-width: 320px;
+        max-width: 300px;
         margin: 0 auto;
-    }
-
-    .welcome {
-        color: var(--primary-color);
-        font-size: 1.8rem !important;
-        text-align: center;
-        margin-top: 1rem !important;
     }
 
     .flex-row-center-center > h1 {
         text-align: center;
-        font-size: 2rem;
-        margin-bottom: 1px;
+        font-size: 2.2rem;
+        margin: 0.5em 0;
     }
 
-    button {
-        margin-top: 1.5em;
-        height: 3em;
+    .password_header1,
+    .password_header2 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        margin-top: 1em;
     }
 
-    .Sign-up-container {
-        text-align: center;
-    }
-
-    .password > i {
+    .password > i, .password_confirm > i {
         position: relative;
         padding-right: 10px;
         right: 20px;
@@ -301,6 +306,33 @@ button {
         color: #666;
     }
 
+    .checkbox-container {
+        flex-wrap: wrap;
+        margin-top: 1em;
+    }
 
+    .checkbox-container h1 {
+        font-size: 0.9rem !important;
+        line-height: 1.4;
+    }
 
+    button {
+        margin-top: 1.5em;
+        height: 3em;
+        font-size: 1rem;
+    }
+
+    .Sign-in-container {
+        text-align: center;
+        padding-top: 1em;
+    }
+
+    .terms {
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    input {
+        font-size: 0.9rem;
+    }
 }

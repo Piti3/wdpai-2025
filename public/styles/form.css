@@ -1,0 +1,98 @@
+/* Resetowanie domyślnych stylów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --primary-color: #2A90F0;
+    --secondary-color: #F2F0EF;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+/* Sekcja formularza */
+.habit-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 30px;
+}
+
+.habit-box {
+    background: white;
+    height: auto;
+    width: 49%;
+    padding: 100px 20px 100px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.habit-box h2 {
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.habit-box p {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.save-btn {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.save-btn:hover {
+    background: var(--primary-color);
+}
+
+@media (max-width: 900px) {
+    .habit-form {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+        gap: 10px;
+    }
+
+    .habit-box {
+        width: 100%;
+        margin: 0.5em 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+}
+

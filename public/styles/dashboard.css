@@ -1,0 +1,243 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 14px;
+    --primary-color: #2A90F0;
+    --secondary-color: #F2F0EF;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    background-color: var(--secondary-color)
+}
+
+/* Nawigacja */
+nav {
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 0 30px;
+}
+
+nav i {
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.logo {
+    max-width: 70px;
+    height: auto;
+}
+
+.add-habit-button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    height: 80px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-habit-button > i {
+    font-size: 30px;
+    font-weight: bold;
+    padding-right: 10px
+}
+
+.desktop-icons {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+    align-items: center;
+    color: var(--secondary-color)
+}
+
+.desktop-icons li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.desktop-icons li:hover {
+    transform: scale(1.1);
+}
+
+.add-habit-button:hover {
+    transform: scale(1.1);
+}
+
+
+/*UKLAD STRONY*/
+main {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+aside {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #D0D5DD;
+}
+
+
+.habit-tracking {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.habit {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #D0D5DD;
+    height: 250px;
+}
+
+.habit h3 {
+    color: var(--primary-color);
+}
+
+.habits-score h2, .todo h2 {
+    padding: 10px;
+}
+
+.habits-score ul {
+    padding-left: 7px; /* Możesz dostosować wartość */
+}
+
+.habits-score li {
+    margin-left: 10px;
+    display: flex;
+    align-items: center; /* Wyrównanie tekstu i paska */
+    gap: 10px; /* Odstęp między tekstem a paskiem */
+}
+
+progress {
+    width: 100%;
+    flex-grow: 1; /* Zapewnia równą szerokość */
+    height: 12px; /* Możesz dostosować */
+    margin: 0; /* Usuń domyślne marginesy */
+}
+
+.todo-input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#habit-input, #todo-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#add-habit, #add-todo {
+    background-color: #2A90F0;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#habit-summary, #todo-list {
+    list-style: none;
+    padding: 0;
+}
+/*MOBILE*/
+
+.mobile-icons {
+    display: none;
+}
+
+.hide-element {
+    display: none;
+}
+
+.show-element {
+    display: flex !important;
+}
+
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .mobile-icons {
+        color:var(--secondary-color);
+        display: flex;
+        flex-direction: column; /* Dodaj kierunek kolumnowy */
+        gap: 15px; /* Odstęp między ikonami */
+        padding: 20px; /* Opcjonalny padding */   
+    }
+
+    .mobile-icons li {
+        display: flex;
+        flex-direction: column; /* Układ ikon i tekstu w pionie */
+        align-items: center; /* Wyśrodkowanie */
+        text-align: center;
+    }
+
+    .desktop-icons {
+        display: none;
+        position: fixed;
+        top: 80px;
+        bottom: 0;
+        left: 0;
+        height: 100vh;
+        background-color: var(--secondary-color);
+        margin: 0;
+        width: 100%;
+        color: var(--primary-color);
+        flex-direction: column; /* Ustawienie w pionie */
+        align-items: center; /* Wyśrodkowanie ikon */
+        justify-content: center;
+        gap: 20px; /* Odstęp między ikonami */
+        padding: 20px;   
+        
+    }
+
+    .add-habit-button {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+    }
+
+    nav {
+        background-color: var(--primary-color);
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px 0 20px;
+    }
+    
+    .logo {
+        max-width: 45px;
+        height: auto;
+    }
+
+}

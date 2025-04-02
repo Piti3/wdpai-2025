@@ -8,10 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8fd9367667.js" crossorigin="anonymous"></script>
 
-    <link href="public/styles/dashboard.css" rel="stylesheet">
-    <script src="public/scripts/menu.js" defer></script>
 
-    <title>DASHBOARD</title>
+    <link href="public/styles/dashboard.css" rel="stylesheet">
+    <link href="public/styles/form.css" rel="stylesheet">
+    <script src="public/scripts/menu.js" defer></script>
+    
+    <title>FORM</title>
 </head>
 <body>
     <header>
@@ -50,38 +52,54 @@
         </nav>
     </header>
     <main>
-        <aside class="dashboard-container">
-            <section class="habits-score">
-                <h2>Your habits:</h2>
-                    <ul>
-                        <li>1 <strong>Czytanie</strong> <progress value="80" max="100"></progress></li>
-                        <li>2 <strong>Siłownia</strong> <progress value="80" max="100"></progress></li>
-                        <li>3 <strong>Bieganie</strong> <progress value="80" max="100"></progress></li>
-                        <li>4 <strong>Śpiew</strong> <progress value="80" max="100"></progress></li>
-                    </ul>
-            </section>
-        
-            <section class="todo">
-                <h2>To do list:</h2>
-                <div class="todo-input-container">
-                    <input type="text" id="todo-input" placeholder="Wpisz zadanie...">
-                    <button id="add-todo">Dodaj</button>
-                </div>
-                <ul id="todo-list"></ul>
-            </section>
-        </aside>
-        <section class="habit-tracking">
-            <div class="habit">
-                <h3>Czytanie <i class="fas fa-book"></i></h3>
-                <div class="calendar"></div>
+        <section class="habit-form">
+            <div class="habit-box">
+                <h2>Yes or No?</h2>
+                <p>Like: did you play chess? Did you workout?</p>
+                <form>
+                    <label>Name</label>
+                    <input type="text" placeholder="Enter name">
+                    
+                    <label>Question</label>
+                    <input type="text" placeholder="Enter question">
+                    
+                    <label>Frequency</label>
+                    <select>
+                        <option>Select frequency</option>
+                    </select>
+                    
+                    <label>Note</label>
+                    <input type="text" placeholder="Enter note">
+                    
+                    <button class="save-btn">SAVE</button>
+                </form>
             </div>
-            <div class="habit">
-                <h3>Siłownia</h3>
-                <div class="calendar"></div>
-            </div>
-            <div class="habit">
-                <h3>Bieganie <i class="fas fa-running"></i></h3>
-                <div class="calendar"></div>
+
+            <div class="habit-box">
+                <h2>Measurable?</h2>
+                <p>Like: How many kilometers did you run?</p>
+                <form>
+                    <label>Name</label>
+                    <input type="text" placeholder="Enter name">
+                    
+                    <label>Question</label>
+                    <input type="text" placeholder="Enter question">
+                    
+                    <label>Frequency</label>
+                    <select>
+                        <option>Select frequency</option>
+                    </select>
+
+                    <label>Target</label>
+                    <select>
+                        <option>Select target</option>
+                    </select>
+                    
+                    <label>Note</label>
+                    <input type="text" placeholder="Enter note">
+                    
+                    <button class="save-btn">SAVE</button>
+                </form>
             </div>
         </section>
     </main>
