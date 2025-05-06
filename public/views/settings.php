@@ -9,9 +9,10 @@
     <script src="https://kit.fontawesome.com/8fd9367667.js" crossorigin="anonymous"></script>
 
     <link href="public/styles/dashboard.css" rel="stylesheet">
+    <link href="public/styles/settings.css" rel="stylesheet">
     <script src="public/scripts/menu.js" defer></script>
 
-    <title>DASHBOARD</title>
+    <title>UserSettings</title>
 </head>
 <body>
     <header>
@@ -33,8 +34,8 @@
                     <span>Settings</span>
                 </li>
                 <li>
-                    <i class="fa-solid fa-clock-rotate-left"></i>
-                    <span>History</span>
+                    <i class="fa-solid fa-right-from-bracket" onclick="window.location.href='logout'"></i>
+                    <span>Log Out</span>
                 </li>
                 <button class="add-habit-button" onclick="location.href='form'">
                     <i class="fas fa-plus"></i> Add Habit
@@ -50,40 +51,37 @@
         </nav>
     </header>
     <main>
-        <aside class="dashboard-container">
-            <section class="habits-score">
-                <h2>Your habits:</h2>
-                    <ul>
-                        <li>1 <strong>Czytanie</strong> <progress value="80" max="100"></progress></li>
-                        <li>2 <strong>Siłownia</strong> <progress value="80" max="100"></progress></li>
-                        <li>3 <strong>Bieganie</strong> <progress value="80" max="100"></progress></li>
-                        <li>4 <strong>Śpiew</strong> <progress value="80" max="100"></progress></li>
-                    </ul>
-            </section>
-        
-            <section class="todo">
-                <h2>To do list:</h2>
-                <div class="todo-input-container">
-                    <input type="text" id="todo-input" placeholder="Wpisz zadanie...">
-                    <button id="add-todo">Dodaj</button>
-                </div>
-                <ul id="todo-list"></ul>
-            </section>
-        </aside>
-        <section class="habit-tracking">
-            <div class="habit">
-                <h3>Czytanie <i class="fas fa-book"></i></h3>
-                <div class="calendar"></div>
-            </div>
-            <div class="habit">
-                <h3>Siłownia</h3>
-                <div class="calendar"></div>
-            </div>
-            <div class="habit">
-                <h3>Bieganie <i class="fas fa-running"></i></h3>
-                <div class="calendar"></div>
-            </div>
-        </section>
-    </main>
+    <section class="settings-section">
+        <h2>Update Profile</h2>
+        <form action="updateProfile" method="POST">
+            <label>Email (not editable):</label>
+            <input type="email" value="<?= $user['email'] ?>" disabled>
+            <label>Name:</label>
+            <input type="text" name="name" value="<?= $user['name'] ?? '' ?>" required>
+            <label>Surname:</label>
+            <input type="text" name="surname" value="<?= $user['surname'] ?? '' ?>" required>
+            <button type="submit">Save</button>
+        </form>
+    </section>
+
+    <section class="settings-section">
+        <h2>Change Password</h2>
+        <form action="updatePassword" method="POST">
+            <label>New Password:</label>
+            <input type="password" name="password" required minlength="6">
+            <label>Repeat Password:</label>
+            <input type="password" name="password_repeat" required minlength="6">
+            <button type="submit">Change Password</button>
+        </form>
+    </section>
+
+    <section class="settings-section delete-section">
+        <h2>Delete Account</h2>
+        <form action="deleteAccount" method="POST" onsubmit="return confirm('Are you sure you want to delete your account? This action cannot be undone.');">
+            <p class="warning-text">Warning: This will permanently delete your account and all associated data!</p>
+            <button type="submit" class="delete-btn">Delete My Account</button>
+        </form>
+    </section>
+</main>
 </body>
 </html>

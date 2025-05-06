@@ -11,7 +11,6 @@
     <link href="public/styles/main.css" rel="stylesheet">
     <script src="public/scripts/script.js" defer></script>
     
-
     <title>Login</title>
 </head>
 <body id="login-page" class="flex-row-center-center">
@@ -23,10 +22,17 @@
 
     <div class="flex-row-center-center">
         <h1>Login to your account</h1>
-        <form class="login-form flex-column-center-center">
+        <form class="login-form flex-column-center-center" action="login" method="POST">
+            <div class="messages">
+                <?php if(isset($messages)) {
+                    foreach ($messages as $message) {
+                        echo $message;
+                    }
+                }?>
+            </div>
             <div class="email">
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Enter your email">
+                <input name="email"type="email" id="email" placeholder="Enter your email">
             </div>
             
             <div class="password_2">
@@ -35,7 +41,7 @@
             </div>
             
             <div class="password">
-                <input type="password" id="password" placeholder="Enter your password">
+                <input name="password"type="password" id="password" placeholder="Enter your password">
                 <i class="fa-solid fa-eye flex-column-center-center" onclick="togglePassword()"></i>  
             </div>
             

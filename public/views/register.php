@@ -20,48 +20,41 @@
 
     <div class="flex-row-center-center">
         <h1>Create an account</h1>
-        <form class="login-form flex-column-center-center">
+        <form class="login-form flex-column-center-center" action="register" method="POST">>
+            <div class="messages">
+                <?php if (isset($messages)) {
+                    foreach ($messages as $message) {
+                        echo $message;
+                    }
+                } ?>
+            </div>
             <div class="email">
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Enter your email">
+                <input name="email" type="email" id="email" placeholder="Enter your email">
             </div>
-            
             <div class="password_header1">
                 <label for="password">Password</label>
             </div>
-            
             <div class="password">
-                <input type="password" id="password" placeholder="Enter your password">
+                <input name="password" type="password" id="password" placeholder="Enter your password">
                 <i class="fa-solid fa-eye flex-column-center-center" onclick="togglePassword()"></i>  
             </div>
-
             <div class="password_header2">
                 <label for="Confirm_password">Confirm Password</label>
             </div>
-
             <div class="password_confirm">
-                <input type="password" id="password" placeholder="Enter your password">
+                <input name="confirm_password" type="password" id="confirm_password" placeholder="Enter your password">
                 <i class="fa-solid fa-eye flex-column-center-center" onclick="togglePassword()"></i>  
             </div>
-
             <div class="checkbox-container">
-                <input type="checkbox" id="agree">
-                <h1 class="checkbox">I agree to all the <a href="terms-page.html" class="terms">Terms</a> and <a href="privacy-policies-page.html" class="terms">Privacy Policies</a></h1>
-                
+                <input type="checkbox" id="agree" required>
+                <h1 class="checkbox">I agree to all the <a href="terms-page.html" class="terms">Terms</a> and <a href="privacy-policies-page.html" class="terms">Privacy Policies</a></h1>   
             </div>
-
             <button type="submit"><i class="fa-solid fa-right-to-bracket"></i> Create account</button>
-
             <div class="Sign-in-container">
-                <h1 class="sign-in-text">Already have an account?? <a href="login" class="sing-in">Sign In!</a></h1>
-                
+                <h1 class="sign-in-text">Already have an account?? <a href="/" class="sing-in">Sign In!</a></h1>   
             </div>
-
-            
         </form>
-        
-
     </div>
-
 </body>
 </html>

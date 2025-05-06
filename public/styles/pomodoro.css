@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --primary-color: #2A90F0;
+    --secondary-color: #F2F0EF;
 }
 
 body {
@@ -15,7 +17,6 @@ main {
     align-items: center;
 }
 
-/* ====== MAIN CONTENT ====== */
 .pomodoro-container {
     display: flex;
     flex-direction: column;
@@ -23,11 +24,10 @@ main {
     margin-top: 120px;
 }
 
-/* Timer */
 .timer-circle {
     width: 400px;
     height: 400px;
-    border: 4px solid #007bff;
+    border: 4px solid var(--primary-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -36,18 +36,18 @@ main {
     color: #007bff;
     font-weight: bold;
     margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-/* Controls */
 .controls {
     display: flex;
     gap: 20px;
 }
 
 .control-btn {
-    background-color: #007bff;
+    background-color: var(--primary-color);
     border: none;
-    color: white;
+    color: var(--secondary-color);
     padding: 15px;
     font-size: 20px;
     border-radius: 5%;
@@ -56,14 +56,13 @@ main {
 }
 
 .control-btn:hover {
-    background-color: #0056b3;
+    background-color: var(--primary-color);
 }
 
-/* Settings */
 .settings {
     margin-top: 20px;
     font-size: 18px;
-    color: #007bff;
+    color: var(--primary-color);
     cursor: pointer;
 }
 
@@ -71,8 +70,50 @@ main {
     margin-right: 5px;
 }
 
-/* ====== RESPONSYWNOŚĆ ====== */
-@media (max-width: 768px) {
+#settings-form {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 15px;
+    background: var(--secondary-color);
+    border-radius: 10px;
+}
+
+#settings-form.visible {
+    display: flex;
+}
+
+#settings-form label {
+    color: #333;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+#settings-form input {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+#settings-form .control-btn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#settings-form .control-btn:hover {
+    background-color: var(--primary-color);
+}
+
+/*MOBILE*/
+@media (max-width: 900px) {
     .navbar {
         flex-direction: column;
         padding: 10px;

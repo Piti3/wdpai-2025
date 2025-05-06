@@ -63,7 +63,6 @@ body {
     width: 100%;
 }
 
-/*ułozenie dwóch kontenerów*/
 #login-page {
     display: flex;
     justify-content: center; /*ustawienie w pionie czy gora czy dół czy srodek*/
@@ -73,7 +72,6 @@ body {
     height: 100vh;
     flex-direction: column;
 }
-
 
 #login-page > div {
     border: 2px solid var(--primary-color);
@@ -85,7 +83,6 @@ body {
 }
 
 #login-page > div > form {
-    /*gap: 1em;*/
     width: 100%;
     padding: 1em;
 }
@@ -95,7 +92,6 @@ button {
     color: rgba(255, 255, 255, 0.766);
     
 }
-
 
 #login-page > div {
     border: 1px solid var(--primary-color);
@@ -108,14 +104,13 @@ button {
     align-items: center;
     box-shadow: rgb(0 0 0 / 34%) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     flex-direction: column;
-    /*height: 40%;*/
 }
 
 .email, .password  {
     position: relative;
     display: flex;
-    flex-direction: column; /* Ustawienie elementów w kolumnie */
-    align-items: flex-start; /* Wyrównanie do lewej */
+    flex-direction: column; 
+    align-items: flex-start;
     width: 100%;
 }
 
@@ -123,10 +118,9 @@ button {
     font-size: 14px;
     margin-top: 15px;
     margin-bottom: 3px;
-    display: block; /* Upewnienie się, że etykieta zajmuje całą szerokość */
+    display: block; 
 }
 
-/* Ikona oczka ustawiona do prawej strony */
 .password > i {
     position: absolute;
     padding-right: 10px;
@@ -138,7 +132,6 @@ button {
     color: #666;
 }
 
-/* Układ "Password" i "Forgot?" w jednej linii */
 .password_2 {
     display: flex;
     justify-content: space-between;
@@ -174,13 +167,11 @@ a.sign-up {
     left: 0;
 }
 
-
 #login-page > div > form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /*gap: 1.5em;*/
     width: 100%;
     padding: 3em;
 }
@@ -198,7 +189,6 @@ input {
     box-sizing: border-box;
 }
 
-
 button {
     margin-top: 3em;
     background-color: var(--primary-color);
@@ -210,13 +200,12 @@ button {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
-
 #login-page > div > form > button:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
 
-
+/*MOBILE*/
 @media (max-width: 900px) {
     body {
         background: white;
@@ -227,7 +216,7 @@ button {
     }
 
     html, body {
-        overflow-x: hidden; /* Ukrywa poziomy scroll */
+        overflow-x: hidden;
     }
 
     #login-page {
@@ -300,7 +289,4 @@ button {
         cursor: pointer;
         color: #666;
     }
-
-
-
 }

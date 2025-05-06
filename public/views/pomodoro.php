@@ -12,6 +12,7 @@
     <link href="public/styles/dashboard.css" rel="stylesheet">
     <link href="public/styles/pomodoro.css" rel="stylesheet">
     <script src="public/scripts/menu.js" defer></script>
+    <script src="public/scripts/pomodoro.js" defer></script>
 
     <title>POMODORO</title>
 </head>
@@ -35,8 +36,8 @@
                     <span>Settings</span>
                 </li>
                 <li>
-                    <i class="fa-solid fa-clock-rotate-left"></i>
-                    <span>History</span>
+                    <i class="fa-solid fa-right-from-bracket" onclick="window.location.href='logout'"></i>
+                    <span>Log Out</span>
                 </li>
                 <button class="add-habit-button" onclick="location.href='form'">
                     <i class="fas fa-plus"></i> Add Habit
@@ -57,12 +58,23 @@
                 <span id="timer">00:25:00</span>
             </div>
             <div class="controls">
-                <button class="control-btn"><i class="fas fa-pause"></i></button>
-                <button class="control-btn"><i class="fas fa-forward"></i></button>
+                <button class="control-btn" id="start-pause-button"><i class="fas fa-play"></i></button>
+                <button class="control-btn" id="reset-button"><i class="fas fa-stop"></i></button>
             </div>
             <div class="settings">
                 <i class="fa-solid fa-gear"></i> <span>Settings</span>
             </div>
+            <form id="settings-form">
+                <label>
+                    Work Duration (min):
+                    <input type="number" name="workDuration" id="work-duration" value="25" min="1">
+                </label>
+                <label>
+                    Break Duration (min):
+                    <input type="number" name="breakDuration" id="break-duration" value="5" min="1">
+                </label>
+                <button type="button" class="control-btn" onclick="applySettings()">Apply</button>
+            </form>
         </div>
     </main>
 </body>

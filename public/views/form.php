@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8fd9367667.js" crossorigin="anonymous"></script>
 
-
     <link href="public/styles/dashboard.css" rel="stylesheet">
     <link href="public/styles/form.css" rel="stylesheet">
     <script src="public/scripts/menu.js" defer></script>
@@ -35,8 +34,8 @@
                     <span>Settings</span>
                 </li>
                 <li>
-                    <i class="fa-solid fa-clock-rotate-left"></i>
-                    <span>History</span>
+                    <i class="fa-solid fa-right-from-bracket" onclick="window.location.href='logout'"></i>
+                    <span>Log Out</span>
                 </li>
                 <button class="add-habit-button" onclick="location.href='form'">
                     <i class="fas fa-plus"></i> Add Habit
@@ -56,20 +55,21 @@
             <div class="habit-box">
                 <h2>Yes or No?</h2>
                 <p>Like: did you play chess? Did you workout?</p>
-                <form>
+                <form method="POST" action="addHabit">
                     <label>Name</label>
-                    <input type="text" placeholder="Enter name">
+                    <input type="text" name="name" placeholder="Enter name">
                     
                     <label>Question</label>
-                    <input type="text" placeholder="Enter question">
+                    <input type="text" name="question" placeholder="Enter question">
                     
                     <label>Frequency</label>
-                    <select>
-                        <option>Select frequency</option>
+                    <select name="frequency">
+                        <option value="daily">Daily</option>
+                        <option value="weekly">Weekly</option>
                     </select>
                     
                     <label>Note</label>
-                    <input type="text" placeholder="Enter note">
+                    <input type="text" name="note" placeholder="Enter note">
                     
                     <button class="save-btn">SAVE</button>
                 </form>
@@ -78,25 +78,24 @@
             <div class="habit-box">
                 <h2>Measurable?</h2>
                 <p>Like: How many kilometers did you run?</p>
-                <form>
+                <form method="POST" action="addHabit">
                     <label>Name</label>
-                    <input type="text" placeholder="Enter name">
+                    <input type="text" name="name" placeholder="Enter name">
                     
                     <label>Question</label>
-                    <input type="text" placeholder="Enter question">
+                    <input type="text" name="question" placeholder="Enter question">
                     
                     <label>Frequency</label>
-                    <select>
-                        <option>Select frequency</option>
+                    <select name="frequency">
+                        <option value="daily">Daily</option>
+                        <option value="weekly">Weekly</option>
                     </select>
 
                     <label>Target</label>
-                    <select>
-                        <option>Select target</option>
-                    </select>
+                    <input type="number" name="target" placeholder="Enter target">
                     
                     <label>Note</label>
-                    <input type="text" placeholder="Enter note">
+                    <input type="text" name="note" placeholder="Enter note">
                     
                     <button class="save-btn">SAVE</button>
                 </form>

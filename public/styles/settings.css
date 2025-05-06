@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --primary-color: #2A90F0;
+    --secondary-color: #F2F0EF;
+}
+
+body {
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings-section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 400px;
+}
+
+.settings-section h2 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.settings-section label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.settings-section input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.settings-section button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.settings-section button:hover {
+    background-color: #1a6ecb;
+}
+
+.delete-btn {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c92a3a;
+}
+
+.delete-section {
+    border: 2px solid #e63946;
+    background-color: #fff5f5;
+}
+
+.delete-section h2 {
+    color: #e63946;
+}
+
+.warning-text {
+    color: #b00020;
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+

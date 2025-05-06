@@ -12,16 +12,16 @@ class DefaultController extends AppController{
         $this->render('register');
     } 
 
-    public function dashboard() { //DISPLAY DASHBOARD
-        $this->render('dashboard');
-    }
-
     public function form() { //DISPLAY form
         $this->render('form');
     } 
 
     public function pomodoro() { //DISPLAY pomodoro
         $this->render('pomodoro');
+    } 
+
+    public function settings() { //DISPLAY settings
+        $this->render('settings');
     } 
 
    

@@ -85,11 +85,10 @@ nav i {
 /*UKLAD STRONY*/
 main {
     display: grid;
-    grid-template-columns: 1fr 1.6fr;
+    grid-template-columns: 1fr 3fr;
     gap: 20px;
     padding: 20px;
 }
-
 
 aside {
     background: white;
@@ -98,7 +97,6 @@ aside {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: 1px solid #D0D5DD;
 }
-
 
 .habit-tracking {
     display: flex;
@@ -112,7 +110,7 @@ aside {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: 1px solid #D0D5DD;
-    height: 250px;
+    height: 260px;
 }
 
 .habit h3 {
@@ -124,21 +122,21 @@ aside {
 }
 
 .habits-score ul {
-    padding-left: 7px; /* Możesz dostosować wartość */
+    padding-left: 7px;
 }
 
 .habits-score li {
     margin-left: 10px;
     display: flex;
-    align-items: center; /* Wyrównanie tekstu i paska */
-    gap: 10px; /* Odstęp między tekstem a paskiem */
+    align-items: center; 
+    gap: 10px; 
 }
 
 progress {
     width: 100%;
-    flex-grow: 1; /* Zapewnia równą szerokość */
-    height: 12px; /* Możesz dostosować */
-    margin: 0; /* Usuń domyślne marginesy */
+    flex-grow: 1;
+    height: 12px;
+    margin: 0; 
 }
 
 .todo-input-container {
@@ -167,8 +165,236 @@ progress {
     list-style: none;
     padding: 0;
 }
-/*MOBILE*/
 
+/*TODO LIST*/
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px 12px;
+    margin: 5px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.todo-checkbox {
+    margin-right: 10px;
+}
+
+.todo-text {
+    flex-grow: 1;
+    margin-right: 10px;
+    font-size: 15px;
+    word-break: break-word;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.todo-item.done .todo-text {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.todo-input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+#add-todo {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.habit-header {
+    display: flex;
+    gap: 5px;
+    justify-content: left;
+    align-items: center;
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #999;
+    transition: color 0.2s ease;
+}
+
+.delete-button:hover {
+    color: #e74c3c;
+}
+
+/*Kalendarz*/
+
+.calendar-grid {
+    display: flex;
+    gap: 16px;
+    padding: 8px 0;
+}
+
+.calendar-month {
+    background-color: white;
+    border-radius: 16px;
+    padding: 10px;
+    color: #2A2A2A;
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.calendar-month:hover {
+    transform: translateY(-2px);
+}
+
+.month-name {
+    text-align: center;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #2A90F0;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    text-align: center;
+    font-size: 13px;
+    color: #7B7B7B;
+    margin-bottom: 10px;
+}
+
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 25px);
+    gap: 1px;
+    justify-content: center;
+}
+
+.day {
+    width: 25px;
+    height: 25px;
+    background-color: #F2F2F2;
+    border: 1px solid #ddd;
+    color: #555;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.day:hover {
+    background-color: #E1F0FF;
+    transform: scale(1.1);
+}
+
+.day.checked {
+    background-color: #2A90F0;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 32px);
+    gap: 6px;
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 8px;
+}
+
+/* zawijanie kalendarza */
+.calendar-wrapper {
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.calendar-grid {
+    display: flex;
+    gap: 20px;
+    width: 200px;
+}
+
+.calendar-month {
+    flex: 0 0 calc(25% - 14px); 
+    min-width: 200px;
+}
+
+.calendar-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.calendar-wrapper::-webkit-scrollbar-thumb {
+    background-color: #2A90F0;
+    border-radius: 10px;
+}
+
+.calendar-wrapper::-webkit-scrollbar-track {
+    background-color: #F2F2F2;
+}
+
+/*POPUP*/
+.popup {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .popup-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  .habit-name-button {
+    background: none;
+    border: none;
+    color: #007BFF; 
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+}
+
+/*MOBILE*/
 .mobile-icons {
     display: none;
 }
@@ -182,22 +408,63 @@ progress {
 }
 
 @media (max-width: 900px) {
+    
     main {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+    
+    aside {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+    
+    .todo {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .progress-bar-container {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .habit-tracking {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+    
+    .habit {
+        width: 100%;
+        box-sizing: border-box;
+    }    
+    
+    .calendar-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 0;
     }
 
     .mobile-icons {
         color:var(--secondary-color);
         display: flex;
-        flex-direction: column; /* Dodaj kierunek kolumnowy */
-        gap: 15px; /* Odstęp między ikonami */
-        padding: 20px; /* Opcjonalny padding */   
+        flex-direction: column;
+        gap: 15px; 
+        padding: 20px;  
     }
 
     .mobile-icons li {
         display: flex;
-        flex-direction: column; /* Układ ikon i tekstu w pionie */
-        align-items: center; /* Wyśrodkowanie */
+        flex-direction: column; 
+        align-items: center;
         text-align: center;
     }
 
@@ -212,10 +479,10 @@ progress {
         margin: 0;
         width: 100%;
         color: var(--primary-color);
-        flex-direction: column; /* Ustawienie w pionie */
-        align-items: center; /* Wyśrodkowanie ikon */
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        gap: 20px; /* Odstęp między ikonami */
+        gap: 20px;
         padding: 20px;   
         
     }
@@ -240,4 +507,18 @@ progress {
         height: auto;
     }
 
+    .calendar-month {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        min-width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    .calendar-wrapper {
+        overflow-x: auto;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: center;       
+    }
 }
