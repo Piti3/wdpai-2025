@@ -16,6 +16,7 @@ p {
 body {
     margin: 0;
     font-size: 18px;
+    font-weight: 400;
     background-image: linear-gradient(-80deg, #2A90F0 56%, #F2F0EF 56%);
 }
 
@@ -33,12 +34,6 @@ body {
     height: auto;
     margin-bottom: 1rem;
     object-fit: contain;
-}
-
-.welcome {
-    color: #F2F0EF;
-    font-size: 2.5rem;
-    margin: 0;
 }
 
 .flex-column-center-center {
@@ -66,31 +61,12 @@ body {
 
 #login-page {
     display: flex;
-    justify-content: center; 
-    padding-right: 9%;
-   
+    justify-content: center;
+    padding-right: 13%;
+    
     align-items: flex-end;
-    height: 100vh;
+    min-height: 100vh;
     flex-direction: column;
-}
-
-#login-page > div {
-    border: 2px solid var(--primary-color);
-    padding: 3em;
-    border-radius: 1em;
-    background-color: white;
-    width: 0%;
-    box-shadow: rgb(0 0 0 / 34%) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-}
-
-#login-page > div > form {
-    width: 100%;
-    padding: 1em;
-}
-
-button {
-    background-color: var(--primary-color);
-    color: rgba(255, 255, 255, 0.766);
 }
 
 #login-page > div {
@@ -104,6 +80,31 @@ button {
     align-items: center;
     box-shadow: rgb(0 0 0 / 34%) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     flex-direction: column;
+}
+
+#login-page > div > form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 3em;
+}
+
+#login-page > div > form > button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+button {
+    margin-top: 2em;
+    background-color: var(--primary-color);
+    color: white;
+    width: 100%;
+    height: 3.7em;
+    border-radius: 0.6em;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .email, .password, .password_confirm  {
@@ -162,6 +163,10 @@ button {
     padding-top: 2%;
 }
 
+a.sign-in {
+    color: var(--primary-color);
+}
+
 .login-form > div > input {
     padding-left: calc(0.5em + 1em);
 }
@@ -176,19 +181,7 @@ button {
     left: 0;
 }
 
-#login-page > div > form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    padding: 3em;
-}
-
 input {
-    width: 100%;
-    height: 1.5em;
-    border-radius: 1em;
     width: 100%;
     height: 3.3rem;
     border-radius: 0.7em;
@@ -198,24 +191,9 @@ input {
     box-sizing: border-box;
 }
 
-button {
-    margin-top: 2em;
-    background-color: var(--primary-color);
-    color: white;
-    width: 100%;
-    height: 3.7em;
-    border-radius: 0.6em;
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-}
-
-#login-page > div > form > button:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
 
 /*MOBILE*/
-@media (max-width: 900px) {
+@media (max-width: 1150px) {
      body {
         background: white;
         justify-content: flex-start;

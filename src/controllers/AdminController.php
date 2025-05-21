@@ -72,4 +72,51 @@ class AdminController extends AppController {
         header("Location: adminDashboard");
         exit();
     }
+
+    public function exportDatabase() {
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+    if (!isset($_SESSION['user_id']) || ($_SESSION['role'] ?? '') !== 'admin') {
+        header('HTTP/1.1 403 Forbidden');
+        echo 'Access denied.';
+        exit();
+    }
+
+    $host   = 'db';
+    $port   = '5432';
+    $dbname = 'db';
+    $dbUser = 'docker';
+
+    $cmd = sprintf(
+        'pg_dump --host=%s --port=%s --username=%s --no-owner --no-privileges --format=plain %s',
+        escapeshellarg($host),
+        escapeshellarg($port),
+        escapeshellarg($dbUser),
+        escapeshellarg($dbname)
+    );
+
+    $output = [];
+    $returnVar = 0;
+    exec($cmd . ' 2>&1', $output, $returnVar);
+
+    if ($returnVar !== 0) {
+        header('Content-Type: text/plain; charset=utf-8');
+        echo "Error during pg_dump:\n";
+        echo implode("\n", $output);
+        exit();
+    }
+
+    $sqlDump = implode("\n", $output);
+    $fileName = 'backup_database_' . date('Ymd_His') . '.sql';
+
+    header('Content-Type: application/sql; charset=utf-8');
+    header('Content-Disposition: attachment; filename="' . $fileName . '"');
+    header('Expires: 0');
+    header('Cache-Control: no-cache, must-revalidate');
+    header('Pragma: no-cache');
+
+    echo $sqlDump;
+    exit();
+    }
 }

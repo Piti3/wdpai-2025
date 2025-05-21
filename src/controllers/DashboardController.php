@@ -150,6 +150,9 @@ class DashboardController extends AppController {
         exit();
     }
     
+    public function form() { //DISPLAY form
+        $this->render('form');
+    } 
 
 }
 

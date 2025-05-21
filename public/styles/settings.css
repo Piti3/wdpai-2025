@@ -1,13 +1,15 @@
 * {
+    font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     --primary-color: #2A90F0;
     --secondary-color: #F2F0EF;
+    --hover-color: #0e5597;
 }
 
 body {
-    background-color: #f9f9f9;
+    background-color: var(--secondary-color);
     text-align: center;
 }
 
@@ -23,7 +25,8 @@ main {
     margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .settings-section h2 {
@@ -57,30 +60,24 @@ main {
 }
 
 .settings-section button:hover {
-    background-color: #1a6ecb;
+    background-color: var(--hover-color);
 }
 
 .delete-btn {
     margin-top: 15px;
     padding: 10px 15px;
-    background-color: #e63946;
-    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.delete-btn:hover {
-    background-color: #c92a3a;
-}
-
 .delete-section {
-    border: 2px solid #e63946;
+    border: 2px solid red;
     background-color: #fff5f5;
 }
 
 .delete-section h2 {
-    color: #e63946;
+    color: red;
 }
 
 .warning-text {

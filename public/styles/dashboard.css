@@ -3,22 +3,24 @@
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 14px;
-    --primary-color: #2A90F0;
-    --secondary-color: #F2F0EF;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --primary-color: #2A90F0;
+    --secondary-color: #F2F0EF;
+    --hover-color: #0e5597;
+
 }
 
 body {
     font-size: 18px;
-    background-color: var(--secondary-color)
+    font-weight: 400;
+    background-color: var(--secondary-color);
 }
 
 /* Nawigacja */
 nav {
     background-color: var(--primary-color);
-    width: 100%;
     height: 120px;
     display: flex;
     align-items: center;
@@ -134,7 +136,6 @@ aside {
 
 progress {
     width: 100%;
-    flex-grow: 1;
     height: 12px;
     margin: 0; 
 }
@@ -153,12 +154,16 @@ progress {
 }
 
 #add-habit, #add-todo {
-    background-color: #2A90F0;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     padding: 8px 15px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+#add-todo:hover {
+    background-color: var(--hover-color);
 }
 
 #habit-summary, #todo-list {
@@ -231,27 +236,26 @@ progress {
     border: none;
     cursor: pointer;
     font-size: 18px;
-    color: #999;
+    color: #7B7B7B;
     transition: color 0.2s ease;
 }
 
 .delete-button:hover {
-    color: #e74c3c;
+    color: red;
 }
 
 /*Kalendarz*/
 
 .calendar-grid {
     display: flex;
-    gap: 16px;
-    padding: 8px 0;
+    gap: 20px;
+    width: 200px;
 }
 
 .calendar-month {
     background-color: white;
     border-radius: 16px;
     padding: 10px;
-    color: #2A2A2A;
     min-width: 200px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease;
@@ -266,17 +270,7 @@ progress {
     margin-bottom: 12px;
     font-weight: 700;
     font-size: 18px;
-    color: #2A90F0;
-}
-
-.weekdays {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 6px;
-    text-align: center;
-    font-size: 13px;
-    color: #7B7B7B;
-    margin-bottom: 10px;
+    color: var(--primary-color);
 }
 
 .days-grid {
@@ -308,32 +302,17 @@ progress {
 }
 
 .day.checked {
-    background-color: #2A90F0;
+    background-color: var(--primary-color);
     color: white;
     font-weight: bold;
     border: none;
 }
 
-.weekdays {
-    display: grid;
-    grid-template-columns: repeat(7, 32px);
-    gap: 6px;
-    text-align: center;
-    font-size: 12px;
-    color: #aaa;
-    margin-bottom: 8px;
-}
 
 /* zawijanie kalendarza */
 .calendar-wrapper {
     overflow-x: auto;
     padding-bottom: 10px;
-}
-
-.calendar-grid {
-    display: flex;
-    gap: 20px;
-    width: 200px;
 }
 
 .calendar-month {
@@ -346,7 +325,7 @@ progress {
 }
 
 .calendar-wrapper::-webkit-scrollbar-thumb {
-    background-color: #2A90F0;
+    background-color: var(--primary-color);
     border-radius: 10px;
 }
 
@@ -385,7 +364,7 @@ progress {
   .habit-name-button {
     background: none;
     border: none;
-    color: #007BFF; 
+    color: var(--primary-color); 
     cursor: pointer;
     font-size: 1.2rem;
     text-decoration: underline;
@@ -448,9 +427,8 @@ progress {
     .calendar-grid {
         display: flex;
         flex-wrap: nowrap;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        gap: 0;
+        gap: 12px;
+        flex-direction: row
     }
 
     .mobile-icons {
@@ -518,7 +496,8 @@ progress {
     .calendar-wrapper {
         overflow-x: auto;
         padding-bottom: 10px;
-        display: flex;
-        justify-content: center;       
+        display: flex;      
     }
+
+  
 }

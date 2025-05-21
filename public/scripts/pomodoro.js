@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('settings-form').classList.toggle('visible');
     });
 
-    // domyślny czas startowy
     remainingTime = parseInt(document.getElementById('work-duration').value) * 60;
     updateTimerDisplay(remainingTime);
 });

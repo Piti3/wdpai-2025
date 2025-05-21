@@ -20,7 +20,7 @@
 
     <div class="flex-row-center-center">
         <h1>Create an account</h1>
-        <form class="login-form flex-column-center-center" action="register" method="POST">>
+        <form class="login-form flex-column-center-center" action="register" method="POST">
             <div class="messages">
                 <?php if (isset($messages)) {
                     foreach ($messages as $message) {
@@ -52,7 +52,7 @@
             </div>
             <button type="submit"><i class="fa-solid fa-right-to-bracket"></i> Create account</button>
             <div class="Sign-in-container">
-                <h1 class="sign-in-text">Already have an account?? <a href="/" class="sing-in">Sign In!</a></h1>   
+                <h1 class="sign-in-text">Already have an account?? <a href="/" class="sign-in">Sign In!</a></h1>   
             </div>
         </form>
     </div>

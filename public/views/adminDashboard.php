@@ -39,45 +39,63 @@
             </ul>
         </nav>
     </header>
-    <main>
-    <h2>All Users</h2>
-<table border="1">
-    <tr>
-        <th>Email</th>
-        <th>Role</th>
-        <th>Change Role</th>
-        <th>Actions</th>
-    </tr>
-    <?php if (!empty($users)): ?>
-        <?php foreach ($users as $user): ?>
-            <tr>
-                <td><?= htmlspecialchars($user['email']) ?></td>
-                <td><?= htmlspecialchars($user['role']) ?></td>
-                <td>
-                    <form method="POST" action="changeRole">
-                        <input type="hidden" name="user_id" value="<?= $user['id'] ?>">
-                        <select name="new_role">
-                            <option value="user" <?= $user['role'] === 'user' ? 'selected' : '' ?>>User</option>
-                            <option value="admin" <?= $user['role'] === 'admin' ? 'selected' : '' ?>>Admin</option>
-                        </select>
-                        <button type="submit">Change</button>
-                    </form>
-                </td>
-                <td>
-                    <form method="POST" action="deleteUser" onsubmit="return confirm('Are you sure?');">
-                        <input type="hidden" name="user_id" value="<?= $user['id'] ?>">
-                        <button type="submit">Delete</button>
-                    </form>
-                </td>
-            </tr>
-        <?php endforeach; ?>
-    <?php else: ?>
-        <tr>
-            <td colspan="4">No users found</td>
-        </tr>
-    <?php endif; ?>
-</table>
-</main>
+    <main class="two-column-container">
+        <section class="left-column">
+            <h2>Users Section</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Change Role</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php if (!empty($users)): ?>
+                            <?php foreach ($users as $user): ?>
+                                <tr>
+                                    <td><?= htmlspecialchars($user['email']) ?></td>
+                                    <td><?= htmlspecialchars($user['role']) ?></td>
+                                    <td>
+                                        <form method="POST" action="changeRole" class="inline-form">
+                                            <input type="hidden" name="user_id" value="<?= $user['id'] ?>">
+                                            <select name="new_role">
+                                                <option value="user" <?= $user['role'] === 'user' ? 'selected' : '' ?>>User</option>
+                                                <option value="admin" <?= $user['role'] === 'admin' ? 'selected' : '' ?>>Admin</option>
+                                            </select>
+                                            <button type="submit">Change</button>
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <form method="POST" action="deleteUser" onsubmit="return confirm('Are you sure?');">
+                                            <input type="hidden" name="user_id" value="<?= $user['id'] ?>">
+                                            <button type="submit">Delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <tr>
+                                <td colspan="4">No users found</td>
+                            </tr>
+                        <?php endif; ?>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
+        <section class="right-column">
+            <h2>Settings Section</h2>
+            <div class="settings-content">
+                <form action="/exportDatabase" method="GET">
+                    <button type="submit" class="export-button">
+                        Eksportuj bazę (.sql)
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

@@ -14,7 +14,6 @@ class SettingsController extends AppController
     }
 
     public function settings() {
-
         $user = $this->userRepo->getById($_SESSION['user_id']);
         return $this->render('settings', ['user' => $user]);
     }

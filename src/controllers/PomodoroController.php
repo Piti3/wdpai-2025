@@ -5,6 +5,15 @@ session_start();
 
 class PomodoroController extends AppController {
 
+    public function __construct() {
+        parent::__construct(); e
+        $this->checkAuthentication();
+    }
+
+    public function pomodoro() {
+        $this->render('pomodoro');
+    }
+    
     public function startPomodoro()
     {
         $workDuration = $_POST['workDuration'] ?? 25;

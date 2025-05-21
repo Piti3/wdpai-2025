@@ -48,13 +48,10 @@
             <button type="submit"><i class="fa-solid fa-right-to-bracket"></i> Login now</button>
 
             <div class="Sign-up-container">
-                <h1 class="sign-up-text">Don't have an account yet? <a href="register" class="sing-up">Sign UP!</a></h1>
+                <h1 class="sign-up-text">Don't have an account yet? <a href="register" class="sign-up">Sign UP!</a></h1>
                 
             </div>
         </form>
-        
-
     </div>
-
 </body>
 </html>

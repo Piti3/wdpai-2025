@@ -1,9 +1,14 @@
 * {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 14px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     --primary-color: #2A90F0;
     --secondary-color: #F2F0EF;
+    --hover-color: #0e5597;
 }
 
 main {
@@ -20,7 +25,6 @@ main {
 
 .habit-box {
     background: white;
-    height: auto;
     width: 49%;
     padding: 100px 20px 100px 20px;
     border-radius: 5px;
@@ -71,7 +75,7 @@ input, select {
 }
 
 .save-btn:hover {
-    background: var(--primary-color);
+    background: var(--hover-color);
 }
 
 @media (max-width: 900px) {
