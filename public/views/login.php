@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/8fd9367667.js" crossorigin="anonymous"></script>
 
     <link href="public/styles/main.css" rel="stylesheet">
-    <script src="public/scripts/script.js" defer></script>
+    <script src="public/scripts/hide_password.js" defer></script>
     
     <title>Login</title>
 </head>
@@ -42,7 +42,7 @@
             
             <div class="password">
                 <input name="password"type="password" id="password" placeholder="Enter your password">
-                <i class="fa-solid fa-eye flex-column-center-center" onclick="togglePassword()"></i>  
+                <i class="fa-solid fa-eye flex-column-center-center" onclick="togglePassword(this)"></i>  
             </div>
             
             <button type="submit"><i class="fa-solid fa-right-to-bracket"></i> Login now</button>

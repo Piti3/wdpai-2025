@@ -191,6 +191,11 @@ input {
     box-sizing: border-box;
 }
 
+a.terms {
+    color: orange;
+}
+
+
 
 /*MOBILE*/
 @media (max-width: 1150px) {

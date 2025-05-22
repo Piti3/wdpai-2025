@@ -6,7 +6,7 @@ session_start();
 class PomodoroController extends AppController {
 
     public function __construct() {
-        parent::__construct(); e
+        parent::__construct();
         $this->checkAuthentication();
     }
 

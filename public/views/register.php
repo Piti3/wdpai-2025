@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/8fd9367667.js" crossorigin="anonymous"></script>
 
     <link href="public/styles/register.css" rel="stylesheet">
+    <script src="public/scripts/hide_password.js" defer></script>
     
     <title>Register</title>
 </head>
@@ -37,14 +38,14 @@
             </div>
             <div class="password">
                 <input name="password" type="password" id="password" placeholder="Enter your password">
-                <i class="fa-solid fa-eye flex-column-center-center" onclick="togglePassword()"></i>  
+                <i class="fa-solid fa-eye flex-column-center-center" onclick="togglePassword(this)"></i>  
             </div>
             <div class="password_header2">
                 <label for="Confirm_password">Confirm Password</label>
             </div>
             <div class="password_confirm">
                 <input name="confirm_password" type="password" id="confirm_password" placeholder="Enter your password">
-                <i class="fa-solid fa-eye flex-column-center-center" onclick="togglePassword()"></i>  
+                <i class="fa-solid fa-eye flex-column-center-center" onclick="togglePassword(this)"></i>  
             </div>
             <div class="checkbox-container">
                 <input type="checkbox" id="agree" required>

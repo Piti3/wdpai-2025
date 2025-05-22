@@ -9,7 +9,6 @@
     --primary-color: #2A90F0;
     --secondary-color: #F2F0EF;
     --hover-color: #0e5597;
-
 }
 
 body {
@@ -132,6 +131,7 @@ aside {
     display: flex;
     align-items: center; 
     gap: 10px; 
+    margin-bottom: 3px;
 }
 
 progress {
