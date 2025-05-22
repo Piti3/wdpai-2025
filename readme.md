@@ -24,22 +24,22 @@ The backend is written in PHP, while the frontend uses plain HTML/CSS/JavaScript
 9. [Diagram ERD](#diagram-erd)
 
 ---
-
+mobile-adminDashboard-page.png
 ## Demo 
-![Login page](./xscreenshots/web-login-page)
-![Register page](./xscreenshots/web-register-page)
-![Dashboard page](./xscreenshots/web-dashboard-page)
-![Admin Dashboard page](./xscreenshots/web-adminDashboard-page)
-![Pomodoro page](./xscreenshots/web-pomodoro-page)
-![Settings page](./xscreenshots/web-settings-page)
-![Add habit page](./xscreenshots/web-addHabit-page)
-![Mobile login page](./xscreenshots/mobile-login-page)
-![Mobile register page](./xscreenshots/mobile-register-page)
-![Mobile dashboard page](./xscreenshots/mobile-dashboard-page)
-![Mobile admin Dashboard page](./xscreenshots/mobile-adminDashboard-page)
-![Mobile pomodoro page](./xscreenshots/mobile-pomodoro-page)
-![Mobile settings page](./xscreenshots/mobile-settings-page)
-![Mobile add habit page](./xscreenshots/mobile-addHabit-page)
+![Login page](https://github.com/Piti3/wdpai-2025/blob/main/xscreenshots/web-login-page)
+![Register page](https://github.com/Piti3/wdpai-2025/blob/main/xscreenshots/web-register-page)
+![Dashboard page](https://github.com/Piti3/wdpai-2025/blob/main/xscreenshots/web-dashboard-page)
+![Admin Dashboard page](https://github.com/Piti3/wdpai-2025/blob/main/xscreenshots/web-adminDashboard-page)
+![Pomodoro page](https://github.com/Piti3/wdpai-2025/blob/main/xscreenshots/web-pomodoro-page)
+![Settings page](https://github.com/Piti3/wdpai-2025/blob/main/xscreenshots/web-settings-page)
+![Add habit page](https://github.com/Piti3/wdpai-2025/blob/main/xscreenshots/web-addHabit-page)
+![Mobile login page](https://github.com/Piti3/wdpai-2025/blob/main/xscreenshots/mobile-login-page)
+![Mobile register page](https://github.com/Piti3/wdpai-2025/blob/main/xscreenshots/mobile-register-page)
+![Mobile dashboard page](https://github.com/Piti3/wdpai-2025/blob/main/xscreenshots/mobile-dashboard-page)
+![Mobile admin Dashboard page](https://github.com/Piti3/wdpai-2025/blob/main/xscreenshots/mobile-adminDashboard-page)
+![Mobile pomodoro page](https://github.com/Piti3/wdpai-2025/blob/main/xscreenshots/mobile-pomodoro-page)
+![Mobile settings page](https://github.com/Piti3/wdpai-2025/blob/main/xscreenshots/mobile-settings-page)
+![Mobile add habit page](https://github.com/Piti3/wdpai-2025/blob/main/xscreenshots/mobile-addHabit-page)
 
 ---
 
