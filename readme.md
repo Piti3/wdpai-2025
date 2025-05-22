@@ -200,4 +200,4 @@ After bringing up containers (`docker-compose up -d`), access:
 - "Export Database" button generates `.sql` dump.
 
 ## Diagram ERD
-![](./xscreenshots/diagram-ERD)
+![](https://github.com/Piti3/wdpai-2025/blob/main/xscreenshots/Diagram-ERD.png?raw=true)
