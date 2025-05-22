@@ -26,7 +26,7 @@ The backend is written in PHP, while the frontend uses plain HTML/CSS/JavaScript
 ---
 
 ## Demo 
-![Login page](https://github.com/Piti3/wdpai-2025/blob/main/xscreenshots/web-login-page?raw=true)
+![Login page](https://github.com/Piti3/wdpai-2025/blob/main/xscreenshots/web-login-page.png?raw=true)
 ![Register page](https://github.com/Piti3/wdpai-2025/blob/main/xscreenshots/web-register-page?raw=true)
 ![Dashboard page](https://github.com/Piti3/wdpai-2025/blob/main/xscreenshots/web-dashboard-page?raw=true)
 ![Admin Dashboard page](https://github.com/Piti3/wdpai-2025/blob/main/xscreenshots/web-adminDashboard-page?raw=true)
